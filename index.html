@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A web-based Student Registration System allowing users to add,edit and delete student records.">   
+    <title> Student Registration System</title>
+    <link rel="stylesheet" href="style.css">  
+</head>
+        <!-- Header Section -->
+<header>
+    <div class="header-content">
+      <h1>Student Registration System</h1>
+      <p>Manage student details efficiently. Register new students, update exisiting records, and maintain a clean database with our user-friendly interface.</p>  
+    </div>
+</header>
+<main class="container">
+        <!-- Form and Input Fields -->
+    <section class="form-section">
+        <h2>Student Registration Form</h2>
+        <form id ="studentForm">
+            <input type ="hidden" id="editIndex" value="-1">
+            <div class="form-group">
+                <label for ="studentName">Student Name:</label>  
+                <input type ="text" id="studentName" placeholder="Enter full name" required> 
+            </div>
+            <div class = "form-group">
+                <label for="studentId">Student ID:</label>
+                <input type ="text" id="studentID" placeholder="Enter numeric Id" required>
+            </div>
+            <div class="form-group">
+              <label for="emailId">EmailID:</label>
+              <input type ="email" id="emailID" placeholder="example@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="text" id="contactNumber" placeholder="10-digit mobile number" required>
+            </div>
+            <div class="button-group">
+                <button type="submit" id="submitBtn">Register Student</button>
+                <button type="button" id="cancelBtn" style="display: none;">Cancel Edit</button>
+            </div>
+        </form>
+    </section>
+         <!-- Display-Section -->
+    <section class="display-section">
+        <h2>Registered Students</h2>
+        <div class="table-container">
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Student ID</th>
+                        <th>Email ID</th>
+                        <th>Contact No.</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <p id="noDataMsg" style="display:none; text-align: centre; color:#666;">No records found. Please register a student.</p>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2026 giStudent Registration System. All rights reserved.</p>
+</footer>    
+
+<script src="script.js"></script>
+</body>
+</html>
