@@ -1,0 +1,206 @@
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Geneva, Verdana, sans-serif;
+}
+ 
+body{
+    background: color #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+        
+header{
+    background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+    color:white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+header h1{
+    font-size:2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p{
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+.container{
+    max-width: 1200px;
+    margin:2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:2rem;
+}
+.form-section{
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.form-section h2{
+    margin-bottom: 1.5rem;
+    color: #444;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+.form-group{
+    margin-bottom: 1rem;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.form-group input{
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition:border-color 0.3s;
+}
+
+.form-group input:focus{
+    border-color: #764ba2;
+    outline:none;
+}
+
+.button-group{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+button{
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 550;
+    transition: background 0.3s;
+}
+
+#submitBtn{
+    background: linear-gradient(to right, #6366f1, #8b5cf6);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#submitBtn:hover{
+    background: linear-gradient(to right, #4f46e5, #7c3aed);
+    transform: translateY(-2px);
+}
+
+#cancelBtn{
+    background-color: #dc3545;
+    color: white;
+}
+#cancelBtn:hover{
+    background-color: #c82333;
+}
+
+.display-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.display-section h2{
+    margin-bottom: 1.5rem;
+    color: #444;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+           /* Dynamic Scrollbar for container */
+.table-container{
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+table{
+    width:100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+th,td{
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th{
+    background-color: #f8f9fa;
+    font-weight: 700;
+    position: sticky;
+    top:0;
+}
+
+tr:hover{
+    background-color: #f1f1f1;
+}
+
+.action-btn{
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+    width: 70px;
+}
+
+.edit-btn{
+    margin: 5px;
+    padding: 5px;   
+    background-color: #ffc107; 
+    color:#333
+
+    
+}
+
+.delete-btn{
+    margin: 5px;
+    padding: 5px;
+    background-color: #dc3545;
+    color: white;
+}
+            /*Responsiveness */
+/* For Mobile */
+
+@media screen and (max-width: 640px) {
+    header h1 { font-size: 1.8rem; }
+    .container { padding: 0 0.5rem; }
+    .form-section, .display-section { padding: 1.5rem; }
+    .button-group { flex-direction: column; }
+    button { width: 100%; }
+}
+
+/* For Tablet */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    header h1 { font-size: 2.2rem; }
+    .container { grid-template-columns: 1fr; }
+}
+
+/* For Desktop */
+@media screen and (min-width: 1025px) {
+    .container {
+        grid-template-columns: 1fr 2fr; 
+    }
+    .form-section {
+        height: fit-content;
+        align-self: start;
+    }
+}
